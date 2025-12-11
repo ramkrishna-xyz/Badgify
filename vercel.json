@@ -1,22 +1,8 @@
 {
-  "functions": {
-    "app/api/badge/[label]/[value]/route.ts": {
-      "runtime": "@vercel/node"
-    },
-    "app/api/badge/custom/route.ts": {
-      "runtime": "@vercel/node"
-    }
-  },
   "regions": ["iad1"],
   "buildCommand": "npm run build",
   "installCommand": "npm install",
   "framework": "nextjs",
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/api/$1"
-    }
-  ],
   "headers": [
     {
       "source": "/api/badge/(.*)",
